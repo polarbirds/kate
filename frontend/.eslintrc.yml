@@ -1,0 +1,10 @@
+extends: airbnb
+
+env:
+  browser: true
+
+rules:
+  "react/forbid-prop-types": [false]
+  "eslint no-console": [false, { allow: ["warn", "error"] }]
+
+parser: babel-eslint

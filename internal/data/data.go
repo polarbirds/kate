@@ -1,16 +1,17 @@
-package main
+package data
 
 import "time"
 
 type Match struct {
-	Players     []Player
-	TimeStarted time.Time
-	TimeEnded   time.Time
-	Levels      map[Player]int
+	TimeStarted  time.Time
+	TimeEnded    time.Time
+	Players      map[string]Player
+	WinningLevel int
 }
 
 type Player struct {
-	Name string
+	Level       int
+	CombatBonus int
 }
 
 func (match Match) Duration() time.Duration {
